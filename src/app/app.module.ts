@@ -23,12 +23,29 @@ import {
   MatTable
 } from "@angular/material/table";
 import { LoginComponent } from './login/login.component';
+import {
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+  MatCardHeader,
+  MatCardImage,
+  MatCardSubtitle
+} from "@angular/material/card";
+import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatListItem, MatNavList} from "@angular/material/list";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatTooltip} from "@angular/material/tooltip";
+import {NgOptimizedImage} from "@angular/common";
+import { MaterialsComponent } from './materials/materials.component';
+import { SalesComponent } from './sales/sales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    LoginComponent
+    LoginComponent,
+    MaterialsComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +67,20 @@ import { LoginComponent } from './login/login.component';
     MatCellDef,
     MatHeaderRowDef,
     MatRowDef,
+    MatCard,
+    MatCardActions,
+    MatCardSubtitle,
+    MatCardHeader,
+    MatCardContent,
+    MatCardImage,
+    MatSidenavContent,
+    MatListItem,
+    MatNavList,
+    MatSidenav,
+    MatSidenavContainer,
+    MatToolbar,
+    MatTooltip,
+    NgOptimizedImage,
   ],
   providers: [
     provideAnimationsAsync()

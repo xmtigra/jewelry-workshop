@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {Product} from "./product.model";
-import {ProductService} from "./product.service";
+import {Product} from "../models/product.model";
+import {ProductService} from "../services/product.service";
 
 @Component({
   selector: 'app-products',

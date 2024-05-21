@@ -1,0 +1,59 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-sidenav-container {
+  top: 64px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mat-card {
+  max-width: 400px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #673ab7;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.username {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+mat-sidenav {
+  width: 200px;
+}

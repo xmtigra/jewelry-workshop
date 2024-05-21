@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Product } from './product.model';
+import {Injectable} from '@angular/core';
+import {Product} from '../models/product.model';
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/compat/database";
 
 @Injectable({
@@ -9,7 +9,8 @@ export class ProductService {
 
   private dbPath = '/products';
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {
+  }
 
   createProduct(product: Product): void {
     this.db.list(this.dbPath).push(product);
