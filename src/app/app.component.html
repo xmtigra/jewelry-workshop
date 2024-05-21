@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span>Admin Panel</span>
+  <span>Адміністрування</span>
   <span class="spacer"></span>
   <button *ngIf="user" (click)="signOut()" mat-raised-button matTooltip="Sign out">
     <span class="avatar">{{user.displayName?.at(0)}}</span>
@@ -10,9 +10,9 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav mode="side" opened *ngIf="user">
     <mat-nav-list>
-      <a mat-list-item routerLink="/products">Products</a>
-      <a mat-list-item routerLink="/materials">Materials</a>
-      <a mat-list-item routerLink="/sales">Sales</a>
+      <a mat-list-item routerLink="/products">Вироби</a>
+      <a mat-list-item routerLink="/materials">Матеріали</a>
+      <a mat-list-item routerLink="/sales">Продажі</a>
     </mat-nav-list>
   </mat-sidenav>
 

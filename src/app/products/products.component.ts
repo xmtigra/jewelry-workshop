@@ -43,14 +43,14 @@ export class ProductsComponent {
   onCreateProduct(): void {
     const newProduct: Product = this.productsForm.value;
     this.productService.createProduct(newProduct);
-    this._snackBar.open('Product created', '', {duration: 2000});
+    this._snackBar.open('Виріб додано', '', {duration: 2000});
     this.resetForm();
   }
 
   onUpdateProduct(): void {
     const updatedProduct: Product = this.productsForm.value;
     this.productService.updateProduct(this.key, updatedProduct);
-    this._snackBar.open('Product updated', '', {duration: 2000});
+    this._snackBar.open('Виріб оновлено', '', {duration: 2000});
     this.resetForm();
   }
 
@@ -75,8 +75,7 @@ export class ProductsComponent {
   onDelete(key: string): void {
     this.resetForm();
     this.productService.deleteProduct(key);
-    this._snackBar.open('Product deleted', '', {duration: 2000});
+    this._snackBar.open('Виріб видалено', '', {duration: 2000});
   }
 
-  protected readonly JSON = JSON;
 }
