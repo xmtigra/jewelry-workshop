@@ -22,11 +22,13 @@ import {
   MatRow, MatRowDef,
   MatTable
 } from "@angular/material/table";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
