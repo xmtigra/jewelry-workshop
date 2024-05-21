@@ -7,3 +7,7 @@ html {
   background: #fdfbff;
   color: #333;
 }
+
+mat-card + mat-card {
+  margin-top: 20px;
+}

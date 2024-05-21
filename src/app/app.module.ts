@@ -38,6 +38,9 @@ import {MatTooltip} from "@angular/material/tooltip";
 import {NgOptimizedImage} from "@angular/common";
 import { MaterialsComponent } from './materials/materials.component';
 import { SalesComponent } from './sales/sales.component';
+import {MatOption} from "@angular/material/autocomplete";
+import {MatSelect} from "@angular/material/select";
+import {MatSort} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -81,6 +84,9 @@ import { SalesComponent } from './sales/sales.component';
     MatToolbar,
     MatTooltip,
     NgOptimizedImage,
+    MatOption,
+    MatSelect,
+    MatSort,
   ],
   providers: [
     provideAnimationsAsync()
