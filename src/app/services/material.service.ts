@@ -1,29 +1,30 @@
-import {AngularFireDatabase} from "@angular/fire/compat/database";
-import {Material} from "../models/material.model";
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
+import {Material} from '../models/material.model';
+import {AngularFireDatabase, AngularFireList} from "@angular/fire/compat/database";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MaterialService {
+
   private dbPath = '/materials';
 
   constructor(private db: AngularFireDatabase) {
   }
 
-  createMaterial(material: Material) {
-    return this.db.list(this.dbPath).push(material);
+  createMaterial(product: Material): void {
+    this.db.list(this.dbPath).push(product);
   }
 
-  updateMaterial(key: string, material: Material) {
-    return this.db.list(this.dbPath).update(key, material);
+  updateMaterial(key: string, value: any): Promise<void> {
+    return this.db.list(this.dbPath).update(key, value);
   }
 
-  deleteMaterial(key: string) {
+  deleteMaterial(key: string): Promise<void> {
     return this.db.list(this.dbPath).remove(key);
   }
 
-  getMaterials() {
-    return this.db.list(this.dbPath).snapshotChanges();
+  getMaterials(): AngularFireList<Material> {
+    return this.db.list(this.dbPath);
   }
 }
