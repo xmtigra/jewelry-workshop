@@ -1,5 +1,5 @@
 import {Sale} from "../models/sale.model";
-import {AngularFireDatabase} from "@angular/fire/compat/database";
+import {AngularFireDatabase, AngularFireList} from "@angular/fire/compat/database";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -11,19 +11,19 @@ export class SaleService {
   constructor(private db: AngularFireDatabase) {
   }
 
-  createSale(sale: Sale) {
-    return this.db.list(this.dbPath).push(sale);
+  createSale(product: Sale): void {
+    this.db.list(this.dbPath).push(product);
   }
 
-  updateSale(key: string, sale: Sale) {
-    return this.db.list(this.dbPath).update(key, sale);
+  updateSale(key: string, value: any): Promise<void> {
+    return this.db.list(this.dbPath).update(key, value);
   }
 
-  deleteSale(key: string) {
+  deleteSale(key: string): Promise<void> {
     return this.db.list(this.dbPath).remove(key);
   }
 
-  getSales() {
-    return this.db.list(this.dbPath).snapshotChanges();
+  getSales(): AngularFireList<Sale> {
+    return this.db.list(this.dbPath);
   }
 }
